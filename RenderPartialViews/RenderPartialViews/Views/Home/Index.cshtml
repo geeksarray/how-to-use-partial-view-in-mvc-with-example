@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<br />
+<a href="http://dotnetmentors.com"><img src="~/dotnetmentors.png" alt="dotnetmentors.com" /></a>
+<br />
+<h2>Address Partial View</h2>
+@*<div>    
+    @{Html.RenderPartial("_address");}
+</div>*@
+
+@*<div>
+    @Html.Partial("_address")
+</div>*@
+
+@*<div>
+@{Html.RenderAction("GetAddress","Home");} 
+    </div>*@
+
+@*<div>
+    @Html.Action("GetAddressAction")
+</div>*@
+
+@*<div>
+    @Html.Action("ActionWithParameter", new { category = "billing" })
+</div>*@
+
+<div id="partialviews">
+
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/jscript">     
+    $(document).ready(function () {        
+        $("#partialviews").load('/home/GetAddressForjQuery');        
+    });        
+</script> 
+
